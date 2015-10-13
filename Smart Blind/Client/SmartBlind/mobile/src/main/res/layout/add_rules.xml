@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contents"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/tempText"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:text="@string/temperature"
+            android:textSize="22sp" />
+
+        <Spinner
+            android:id="@+id/conjucts_options1"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="40dp"
+            android:background="#000000"
+            android:textAlignment="center"
+            android:entries="@array/conjuncts"
+            android:popupBackground="@android:color/holo_green_dark" />
+
+        <Spinner
+            android:id="@+id/temp_options"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="40dp"
+            android:background="#000000"
+            android:textAlignment="center"
+            android:entries="@array/temperature_range_values"
+            android:popupBackground="@android:color/holo_green_dark" />
+
+        <Spinner
+            android:id="@+id/rule_conjuncts"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="40dp"
+            android:background="#000000"
+            android:textAlignment="center"
+            android:entries="@array/rule_connectors"
+            android:popupBackground="@android:color/holo_green_dark" />
+
+        <TextView
+            android:id="@+id/light_intensity"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:text="@string/light_intensity"
+            android:textSize="22sp" />
+
+        <Spinner
+            android:id="@+id/conjucts_options2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="#000000"
+            android:entries="@array/conjuncts"
+            android:popupBackground="@android:color/holo_green_dark" />
+
+        <Spinner
+            android:id="@+id/light_intensity_options"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:background="#000000"
+            android:entries="@array/light_intensity_range_values"
+            android:popupBackground="@android:color/holo_green_dark" />
+
+
+        <TextView
+            android:id="@+id/then"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:text="@string/then"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/blind"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:text="@string/blind_action"
+            android:textSize="22sp" />
+
+        <Spinner
+            android:id="@+id/blind_action_options"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:background="#000000"
+            android:entries="@array/blind_action_range_values"
+            android:popupBackground="@android:color/holo_green_dark" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/button"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

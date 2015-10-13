@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/ambience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dip"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:weightSum="6">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:id="@+id/lightIntensityImage"
+                    android:src="@drawable/ic_bright" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:id="@+id/lightIntensityText"
+                    android:text="Light Intensity"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dip"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:weightSum="6">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:id="@+id/tempImage"
+                    android:src="@drawable/ic_temp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="Temperature"
+                    android:id="@+id/tempText"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="last updated on"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_gravity="center_horizontal" />
+
+
+        <TextClock
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/textClock"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="View Rules"
+            android:textColor="@android:color/holo_green_light"
+            android:id="@+id/viewStatus"
+            android:layout_gravity="center_horizontal" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notifications   "
+            android:id="@+id/notificationsSwitch"
+            android:layout_below="@android:id/list"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

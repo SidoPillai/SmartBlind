@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">SmartBlind</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="temperature">Temperature</string>
+    <string name="light_intensity">Light Intensity</string>
+    <string name="blind_action">Blind Action</string>
+    <string name="then">THEN</string>
+    <string name="action_refresh">Refresh</string>
+
+    <string-array name="temperature_range_values">
+        <item></item>
+        <item>FREEZING</item>
+        <item>COLD</item>
+        <item>COMFORT</item>
+        <item>WARM</item>
+        <item>HOT</item>
+    </string-array>
+
+    <string-array name="light_intensity_range_values">
+        <item></item>
+        <item>DARK</item>
+        <item>DIM</item>
+        <item>BRIGHT</item>
+    </string-array>
+
+    <string-array name="conjuncts">
+        <item></item>
+        <item>IS</item>
+    </string-array>
+
+    <string-array name="rule_connectors">
+        <item></item>
+        <item>AND</item>
+        <item>OR</item>
+    </string-array>
+
+    <string-array name="blind_action_range_values">
+        <item></item>
+        <item>OPEN</item>
+        <item>HALF</item>
+        <item>CLOSE</item>
+    </string-array>
+
+</resources>
