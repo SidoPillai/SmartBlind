@@ -3,6 +3,7 @@ Smart Blind is an IOT application using raspberry pi as a server. <br>
 The android client lets you view the current temperature and light intensity of the room
 from the pi's temperature and light sensitive sensors.<br>
 You can interact with the physical world by performing an action on the sensors.<br>
+![](https://github.com/sidd4698/SmartBlind/blob/master/Smart%20Blind/home.png)
 
 # Features
 1. Add fuzzy rules to define blind action e.g. to close the when it is bright and temperature is cold. 
