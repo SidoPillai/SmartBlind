@@ -1,0 +1,57 @@
+FUNCTION_BLOCK smartblind
+
+VAR_INPUT
+	temperature : REAL;
+	ambient : REAL;
+END_VAR
+
+VAR_OUTPUT
+	blind : REAL;
+END_VAR
+
+FUZZIFY temperature
+	TERM freezing := (-50,1)(-10,0);
+	TERM cold := (-10,0)(-5,1)(5,1)(10,0);
+	TERM comfort :=(5,0)(10,1)(15,1)(20,0);
+	TERM warm := (15,0)(20,1)(25,1)(30,0);
+	TERM hot := (25,0)(50,1);
+END_FUZZIFY	
+
+
+FUZZIFY ambient
+	TERM dark := (0,0)(5,0);
+	TERM dim := (5,0)(7.5,1)(10,0);
+	TERM bright := (7.5,0)(10,1)(15,0);
+END_FUZZIFY
+
+
+DEFUZZIFY blind
+	TERM open := (0,0)(5,1)(10,0);
+	TERM half := (10,0)(15,1)(20,0);
+	TERM close :=(20,0)(25,1)(30,0);
+	METHOD : COG;
+	DEFAULT :=0;
+END_DEFUZZIFY
+
+RULEBLOCK No1
+	AND : MIN;
+	ACT : MIN;
+	ACCU : MAX;
+	
+	RULE 1 : IF temperature IS freezing AND ambient IS dark THEN blind IS close;
+	RULE 2 : IF temperature IS cold AND ambient IS bright THEN blind IS half;
+	RULE 3 : IF temperature IS warm AND ambient IS dim THEN blind IS half;
+	RULE 4 : IF temperature IS warm AND ambient IS bright THEN blind IS half;
+	RULE 5 : IF ambient IS dark THEN blind IS open;
+	RULE 6 : IF temperature IS hot AND ambient IS bright THEN blind IS close;
+	RULE 7 : IF ambient IS bright THEN blind IS close;
+END_RULEBLOCK 
+
+END_FUNCTION_BLOCK
+	
+	
+
+
+	
+
+
