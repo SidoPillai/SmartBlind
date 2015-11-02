@@ -11,6 +11,6 @@ You can interact with the physical world by performing an action on the sensors.
 3. 3-D touch to view application temperature and light intensity on the app.
 
 # Contribute
-Email me at srp4698@rit.edu or sbp3624@rit.edu to know more about the server side configuration. 
+Email us at srp4698@rit.edu or sbp3624@rit.edu to know more about the server side configuration. 
 At this point we are more focussed on user experience. 
 Feel free to add features on the application keep an eye on issues to work on task right away.
